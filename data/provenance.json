@@ -1,0 +1,81 @@
+{
+  "provider": "Open-Meteo Historical Weather API",
+  "dataset": "ECMWF / Copernicus ERA5 reanalysis",
+  "licence": "CC BY 4.0",
+  "documentation": "https://open-meteo.com/en/docs/historical-weather-api",
+  "downloaded_at_utc": "2026-10-23T02:37:12.860156+00:00",
+  "cities": [
+    {
+      "city": "warsaw",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=52.23&longitude=21.01&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FWarsaw",
+      "csv_sha256": "ead8343165261f317a3efb170c405e837bdd58829d42ff60948a83e859f77095",
+      "rows": 5844
+    },
+    {
+      "city": "istanbul",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=41.01&longitude=28.98&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FIstanbul",
+      "csv_sha256": "bb8338975dd858c09d4a24a4ccff93be4ab88a8ce4ae2491ba2f0d1bf910c692",
+      "rows": 5844
+    },
+    {
+      "city": "berlin",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=52.52&longitude=13.41&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FBerlin",
+      "csv_sha256": "3264fc743eb9f79d04b0f6a3688af95fbfcd19728466734676aa0a4441884129",
+      "rows": 5844
+    },
+    {
+      "city": "paris",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=48.86&longitude=2.35&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FParis",
+      "csv_sha256": "a5b96ba96ebb24c5d3bf78a5d46167cb039b1bae3994e5e579e8e95c1bb67691",
+      "rows": 5844
+    },
+    {
+      "city": "london",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=51.51&longitude=-0.13&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FLondon",
+      "csv_sha256": "db632ccc769d8e3b51ce3d7da5d5e04a4a7b48dad7a2453046fb9e0d072fa911",
+      "rows": 5844
+    },
+    {
+      "city": "rome",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=41.9&longitude=12.5&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FRome",
+      "csv_sha256": "7598ac6cc7c94f325b02701024c50b2a7c3c581a856e7a3633feec3e43a2818b",
+      "rows": 5844
+    },
+    {
+      "city": "madrid",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.42&longitude=-3.7&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FMadrid",
+      "returned_latitude": 40.5,
+      "returned_longitude": -3.75,
+      "raw_response_sha256": "a9c9c1f5c7b54370ed137334870624076128e556705fcf0b92c647a84204c2e3",
+      "csv_sha256": "890d7580c9628fb5e7697d3fb7f4df10aa295345346ab045c46227aef34f0076",
+      "units": {
+        "time": "iso8601",
+        "temperature_2m_mean": "\u00b0C",
+        "temperature_2m_max": "\u00b0C",
+        "temperature_2m_min": "\u00b0C",
+        "precipitation_sum": "mm",
+        "wind_speed_10m_max": "km/h",
+        "shortwave_radiation_sum": "MJ/m\u00b2"
+      },
+      "rows": 5844
+    },
+    {
+      "city": "ankara",
+      "request_url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.93&longitude=32.86&start_date=2010-01-01&end_date=2025-12-31&daily=temperature_2m_mean%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum%2Cwind_speed_10m_max%2Cshortwave_radiation_sum&models=era5&timezone=Europe%2FIstanbul",
+      "returned_latitude": 40.0,
+      "returned_longitude": 32.75,
+      "raw_response_sha256": "68890da19faff6ab374167bed3ccd9d65237d90c46edd928929531ccb4442ebb",
+      "csv_sha256": "35614c6e710429a7011390f123fa32313cade0381627a9b0952efe47fe17c3c9",
+      "units": {
+        "time": "iso8601",
+        "temperature_2m_mean": "\u00b0C",
+        "temperature_2m_max": "\u00b0C",
+        "temperature_2m_min": "\u00b0C",
+        "precipitation_sum": "mm",
+        "wind_speed_10m_max": "km/h",
+        "shortwave_radiation_sum": "MJ/m\u00b2"
+      },
+      "rows": 5844
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+services:
+  skycast:
+    build: .
+    ports:
+      - "8502:8502"
+    restart: unless-stopped

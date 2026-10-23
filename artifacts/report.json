@@ -1,0 +1,612 @@
+{
+  "seed": 42,
+  "prediction_horizon": "Next local calendar day after the final complete input day",
+  "data_period": "2010-01-01 / 2025-12-31",
+  "train_end": "2020-12-31",
+  "validation_period": "2021-2022",
+  "calibration_period": "2023",
+  "test_period": "2024-2025",
+  "training_note": "No random split. Models fit on 2010-2020 only; validation selects model per city; 2023 sets absolute residual intervals; 2024-2025 is held out. Prior realised test-day weather becomes available for each successive retrospective one-step prediction. No refit on validation/calibration/test.",
+  "cities": {
+    "warsaw": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.7408219178082192,
+        "Ridge regression": 1.5455394064555088,
+        "Gradient boosting": 1.5397650255151298
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.7121751025991792,
+          "rmse": 2.2414513082305096,
+          "bias": 0.008481532147742825
+        },
+        "Ridge regression": {
+          "mae": 1.5359015179426725,
+          "rmse": 2.0006600768111578,
+          "bias": -0.1448270735332694
+        },
+        "Gradient boosting": {
+          "mae": 1.552533046382861,
+          "rmse": 2.010298785079691,
+          "bias": -0.11241663264484554
+        },
+        "Seasonal mean": {
+          "mae": 3.2467599874794986,
+          "rmse": 4.06851607971272,
+          "bias": -1.1842165248421763
+        }
+      },
+      "interval_radius": 3.55170302049293,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.9192886456908345,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "ead8343165261f317a3efb170c405e837bdd58829d42ff60948a83e859f77095"
+    },
+    "istanbul": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.1202739726027398,
+        "Ridge regression": 1.002240651709199,
+        "Gradient boosting": 0.9669366644852915
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 0.957045143638851,
+          "rmse": 1.3460993960816292,
+          "bias": 0.0112175102599179
+        },
+        "Ridge regression": {
+          "mae": 0.8664257840209671,
+          "rmse": 1.1663580274032614,
+          "bias": -0.08428614620450425
+        },
+        "Gradient boosting": {
+          "mae": 0.8153861168540744,
+          "rmse": 1.0965846811295437,
+          "bias": -0.08980681880077816
+        },
+        "Seasonal mean": {
+          "mae": 2.0485293114608134,
+          "rmse": 2.6335056906165195,
+          "bias": -0.6579022310016117
+        }
+      },
+      "interval_radius": 2.351926831612868,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.945280437756498,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "bb8338975dd858c09d4a24a4ccff93be4ab88a8ce4ae2491ba2f0d1bf910c692"
+    },
+    "berlin": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.6402739726027395,
+        "Ridge regression": 1.5035507086350364,
+        "Gradient boosting": 1.4419244313855033
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.7660738714090287,
+          "rmse": 2.2622277556878863,
+          "bias": 0.007934336525307801
+        },
+        "Ridge regression": {
+          "mae": 1.5807905979192673,
+          "rmse": 2.014499915484491,
+          "bias": 0.012646209367687128
+        },
+        "Gradient boosting": {
+          "mae": 1.5379647515578583,
+          "rmse": 1.9855493050289381,
+          "bias": -0.019461130295968448
+        },
+        "Seasonal mean": {
+          "mae": 2.898833162962554,
+          "rmse": 3.6469743874529224,
+          "bias": -0.7589531648423706
+        }
+      },
+      "interval_radius": 3.2971135370535833,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.905608755129959,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "3264fc743eb9f79d04b0f6a3688af95fbfcd19728466734676aa0a4441884129"
+    },
+    "paris": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.517945205479452,
+        "Ridge regression": 1.3727674492787696,
+        "Gradient boosting": 1.334381230630059
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.6790697674418606,
+          "rmse": 2.153614973838257,
+          "bias": 0.012859097127222975
+        },
+        "Ridge regression": {
+          "mae": 1.4579875090566254,
+          "rmse": 1.9029573537418298,
+          "bias": -0.10498607419620237
+        },
+        "Gradient boosting": {
+          "mae": 1.4595814002256282,
+          "rmse": 1.900087569523099,
+          "bias": -0.05923560649854544
+        },
+        "Seasonal mean": {
+          "mae": 2.6223710491865626,
+          "rmse": 3.302999213212304,
+          "bias": -0.5584121360524342
+        }
+      },
+      "interval_radius": 2.7931359076368487,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.86593707250342,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "a5b96ba96ebb24c5d3bf78a5d46167cb039b1bae3994e5e579e8e95c1bb67691"
+    },
+    "london": {
+      "selected_model": "Ridge regression",
+      "validation_mae": {
+        "Persistence": 1.4036986301369863,
+        "Ridge regression": 1.2716207938895323,
+        "Gradient boosting": 1.2863672719290384
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.5714090287277702,
+          "rmse": 2.0201007681655616,
+          "bias": 0.010533515731874133
+        },
+        "Ridge regression": {
+          "mae": 1.3778352076870775,
+          "rmse": 1.7755408296134165,
+          "bias": -0.12834797910249177
+        },
+        "Gradient boosting": {
+          "mae": 1.3706387514356078,
+          "rmse": 1.7777474310750787,
+          "bias": -0.07320538938140757
+        },
+        "Seasonal mean": {
+          "mae": 2.348218932319108,
+          "rmse": 2.9497633245398034,
+          "bias": -0.721804772537461
+        }
+      },
+      "interval_radius": 2.8448830481865652,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.8974008207934336,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "db632ccc769d8e3b51ce3d7da5d5e04a4a7b48dad7a2453046fb9e0d072fa911"
+    },
+    "rome": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.0838356164383562,
+        "Ridge regression": 0.9854062145827385,
+        "Gradient boosting": 0.9679049596334791
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.0853625170998633,
+          "rmse": 1.4711730711232986,
+          "bias": 0.006292749658002738
+        },
+        "Ridge regression": {
+          "mae": 1.0090648918892713,
+          "rmse": 1.354152603085068,
+          "bias": -0.13454193232706285
+        },
+        "Gradient boosting": {
+          "mae": 1.0036845790844966,
+          "rmse": 1.3328022579217758,
+          "bias": -0.1693052219526723
+        },
+        "Seasonal mean": {
+          "mae": 2.164752767013585,
+          "rmse": 2.7125578761052247,
+          "bias": -1.1873148493959997
+        }
+      },
+      "interval_radius": 2.37420346368199,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.9124487004103967,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "7598ac6cc7c94f325b02701024c50b2a7c3c581a856e7a3633feec3e43a2818b"
+    },
+    "madrid": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.2994520547945205,
+        "Ridge regression": 1.1600365632789762,
+        "Gradient boosting": 1.0931006282489197
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.3812585499316006,
+          "rmse": 1.7847622242165548,
+          "bias": 0.005608755129958962
+        },
+        "Ridge regression": {
+          "mae": 1.201045916262526,
+          "rmse": 1.55677363388213,
+          "bias": -0.042171749788521055
+        },
+        "Gradient boosting": {
+          "mae": 1.175547694357178,
+          "rmse": 1.5090027658650704,
+          "bias": -0.04828997888837617
+        },
+        "Seasonal mean": {
+          "mae": 2.5371415973513414,
+          "rmse": 3.038135531012957,
+          "bias": -0.37690166595667224
+        }
+      },
+      "interval_radius": 2.406521835974056,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.8864569083447332,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "890d7580c9628fb5e7697d3fb7f4df10aa295345346ab045c46227aef34f0076"
+    },
+    "ankara": {
+      "selected_model": "Gradient boosting",
+      "validation_mae": {
+        "Persistence": 1.6132876712328768,
+        "Ridge regression": 1.3818943647542057,
+        "Gradient boosting": 1.315767661788966
+      },
+      "test_metrics": {
+        "Persistence": {
+          "mae": 1.4075239398084816,
+          "rmse": 1.862822975788222,
+          "bias": 0.004240766073871401
+        },
+        "Ridge regression": {
+          "mae": 1.1779806781187483,
+          "rmse": 1.5535526913593278,
+          "bias": -0.062191826376885806
+        },
+        "Gradient boosting": {
+          "mae": 1.158727459969964,
+          "rmse": 1.5375759997423961,
+          "bias": -0.07585432376382105
+        },
+        "Seasonal mean": {
+          "mae": 2.8414774456171834,
+          "rmse": 3.573990165856026,
+          "bias": -0.7093231490507963
+        }
+      },
+      "interval_radius": 2.4116825069992363,
+      "interval_target_coverage": 0.9,
+      "test_interval_coverage": 0.8919288645690835,
+      "splits": {
+        "train": {
+          "rows": 4004,
+          "start": "2010-01-15",
+          "end": "2020-12-31"
+        },
+        "validation": {
+          "rows": 730,
+          "start": "2021-01-01",
+          "end": "2022-12-31"
+        },
+        "calibration": {
+          "rows": 365,
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "test": {
+          "rows": 731,
+          "start": "2024-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "features": [
+        "temperature_2m_mean_lag1",
+        "temperature_2m_max_lag1",
+        "temperature_2m_min_lag1",
+        "precipitation_sum_lag1",
+        "wind_speed_10m_max_lag1",
+        "shortwave_radiation_sum_lag1",
+        "temperature_lag2",
+        "temperature_lag3",
+        "temperature_lag7",
+        "temperature_lag14",
+        "temperature_mean3",
+        "temperature_mean7",
+        "temperature_mean14",
+        "temperature_change",
+        "temperature_range_lag1",
+        "year_sin",
+        "year_cos"
+      ],
+      "source_csv_sha256": "35614c6e710429a7011390f123fa32313cade0381627a9b0952efe47fe17c3c9"
+    }
+  }
+}
