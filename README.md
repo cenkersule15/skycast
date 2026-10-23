@@ -6,6 +6,13 @@ Ein reproduzierbares Machine-Learning-Projekt für eintägige Temperaturprognose
 
 **Autor:** Cenker Sule · Artificial Intelligence & Data Science
 
+## Anwendungsvorschau
+
+![SkyCast auf Deutsch: aktuelle Wetterprognosen für Warschau](docs/screenshots/live-de.jpeg)
+
+*Aufnahme vom 23. Oktober 2026. Die laufende Anwendung lädt aktuelle Werte über Open-Meteo.*
+
+
 ## Aktuelle Wetterprognosen
 
 Die Startansicht zeigt aktuelle modellbasierte Wetterwerte und eine **7-Tage-Prognose** über die Open-Meteo Forecast API für alle acht Städte. Sie verwendet die lokale Stadtzeit, lädt Daten höchstens 30 Minuten aus dem Cache und bietet eine Schaltfläche zum Aktualisieren. Für diese Ansicht ist Internet erforderlich; bei einem API-Fehler wird keine alte historische Prognose als aktuelle ausgegeben.

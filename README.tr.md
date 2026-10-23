@@ -6,6 +6,13 @@
 
 **Geliştiren:** Cenker Sule · Yapay Zekâ ve Veri Bilimi
 
+## Uygulama görünümü
+
+![SkyCast Türkçe: Varşova için güncel hava tahminleri](docs/screenshots/live-tr.jpeg)
+
+*23 Ekim 2026 tarihli ekran görüntüsü. Çalışan uygulama güncel değerleri Open-Meteo üzerinden alır.*
+
+
 ## Güncel hava tahminleri
 
 Ana ekran artık sekiz şehir için Open-Meteo Forecast API üzerinden **güncel hava tahminini ve 7 günlük tahminleri** gösterir. Tarihler şehrin yerel saatine göre hesaplanır. Yanıtlar en fazla 30 dakika önbellekte tutulur; Tahmini yenile düğmesiyle tekrar alınabilir. Bu ekran internet gerektirir. API hatasında eski tarihler güncelmiş gibi gösterilmez.

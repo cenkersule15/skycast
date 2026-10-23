@@ -6,6 +6,13 @@ A reproducible machine-learning project for **one-day-ahead mean temperature pre
 
 **Author:** Cenker Sule · Artificial Intelligence & Data Science
 
+## Application preview
+
+![SkyCast in English: live weather forecasts for Warsaw](docs/screenshots/live-en.jpeg)
+
+*Captured on 23 October 2026. The running app retrieves up-to-date values from Open-Meteo.*
+
+
 ## Live weather forecasts
 
 The default view now shows current model-based weather estimates and a **seven-day forecast** from the Open-Meteo Forecast API for all eight cities. Dates use each city’s local timezone. Responses are cached for up to 30 minutes and can be refreshed manually. Internet is required for this view. Provider errors are shown explicitly; historical predictions are never substituted as current forecasts.
